@@ -7,11 +7,8 @@ int main(){
     scanf("%d", &num);
 
     for(int i = 1; i < 7; i++){
-        for(int j = 1; j <= i; j++){
-            result *= num;
-        }
+        result *= num;
         printf("%d ^ %d = %d\n", num, i, result);
-        result = 1;
     }
 
     return 0;
