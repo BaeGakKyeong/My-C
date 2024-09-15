@@ -6,7 +6,10 @@ int main(){
     do{
         printf("대문자 영문자를 입력하시오: ");
         scanf("%c", &ascii);
-    }while(ascii < 'a' || ascii > 'z');
+
+    }while(ascii < 'A' || ascii > 'Z');
+
+    printf("%c의 소문자는 %c입니다.", ascii, ascii + 32);
 
     return 0;
 }
