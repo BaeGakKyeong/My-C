@@ -19,7 +19,7 @@ int main(){
         printf("Score[%d] = %d\n", i, Scores[i]);
     }
 
-    printf("avg = %f\n", (float)sum / 5.0);
+    printf("avg = %5.1f\n", (float)sum / 5.0);
 
     return 0;
 }
