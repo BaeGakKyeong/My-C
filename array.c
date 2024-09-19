@@ -9,13 +9,13 @@ int main(){
     //srand((unsigned)time(NULL));
     printf("5명의 점수를 입력하시오: ");
 
-    for(int i = 1; i <= 5; i++){
+    for(int i = 0; i < 5; i++){
         scanf("%d", &Scores[i]);
         sum += Scores[i];
         //Scores[i] = rand() % 101;
     }
 
-    for(int i = 1; i <= 5; i++){
+    for(int i = 0; i < 5; i++){
         printf("Score[%d] = %d\n", i, Scores[i]);
     }
 
