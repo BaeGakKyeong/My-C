@@ -5,7 +5,7 @@ int main(){
 
     do{
         printf("대문자 영문자를 입력하시오: ");
-        scanf("% c", &ascii);
+        scanf("%c", &ascii);
 
     }while(ascii < 'A' || ascii > 'Z');
 
