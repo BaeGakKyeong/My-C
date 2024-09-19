@@ -8,7 +8,6 @@ int main(){
 
     srand((unsigned)time(NULL));
 
-if(i % 100 == 0){
     for(int i = 1; i <= 1000; i++){
         side = rand() % 6;
 
@@ -35,12 +34,6 @@ if(i % 100 == 0){
         }
 
     }
-
-    printf("주사위 100번을 던져서 나온 각 눈의 갯수: \n");
-        for(int i = 0; i < 6; i++){
-            printf("%d의 눈: %d회\n", i + 1, Dice[i]);
-    }
-}
 
     printf("주사위 1000번을 던져서 나온 각 눈의 갯수: \n");
     for(int i = 0; i < 6; i++){
