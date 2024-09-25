@@ -17,3 +17,12 @@ int main(){
 
     return 0;
 }
+
+
+/* GPT의 코드
+for (int i = 2; i < n; i++) {
+        fn = f0 + f1; // 다음 항은 이전 두 항의 합
+        printf(" %d", fn);
+        f0 = f1;      // f0을 f1으로 갱신
+        f1 = fn;      // f1을 fn으로 갱신
+*/
