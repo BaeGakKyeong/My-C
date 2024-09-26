@@ -1,3 +1,5 @@
+//사용자는 열개의 좌석을 제시받아, 좌석을 예약할 수 있도록 하는 프로그럄
+
 #include <stdio.h>
 
 void line(){
@@ -7,7 +9,7 @@ void line(){
 int main(){
     int seat[10];
     int seat_for_R;
-    char YoN;
+    char YoN;   //Yes or No
 
     for(int k = 1; k <= 10; k++){
         seat[k] = 0;
@@ -29,12 +31,12 @@ int main(){
             }
             
             printf("\n좌석 번호를 입력하시오: ");
-            INPUT_SEAT_NUM :
+            INPUT_SEAT_NUM :                            //line37참조
             scanf("%d", &seat_for_R);
 
             if (seat_for_R < 1 || seat_for_R > 10){     //해당하는 좌석번호가 없으면 다시 입력
                 printf("좌석번호를 다시 입력해 주세요: ");
-                goto INPUT_SEAT_NUM; 
+                goto INPUT_SEAT_NUM;                    //line32로 돌아감
             }
             
 
