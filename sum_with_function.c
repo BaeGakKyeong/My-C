@@ -13,11 +13,12 @@ int main(){
     printf("두 정수를 입력하시오: ");
     scanf("%d %d", &x, &y);
 
-    //sum_2num(x, y);
-    //printf("두 수의 합은 %d입니다.", sum_2num); 이 문장은 경고가 발생함. sum_2num함수가 return으로 결과를 반환하지만, 변수처럼 사용할 수는 없음.
+    // printf("두 수의 합은 %d입니다.", sum_2num); 이 문장은 잘못된 함수 사용으로 인해 경고나 오류가 발생함.
+    // 함수 이름만 사용하면 함수 포인터를 가리키므로, 함수 호출을 해야 함.
+
     printf("두 수의 합은 %d입니다.\n", sum_2num(x, y));   //또는
 
-    int sum = sum_2num(x, y);
+    int sum = sum_2num(x, y);                        //이런 식의 문장을 사용해야 함.
     printf("두 수의 합은 %d입니다.", sum);
 
     return 0;
