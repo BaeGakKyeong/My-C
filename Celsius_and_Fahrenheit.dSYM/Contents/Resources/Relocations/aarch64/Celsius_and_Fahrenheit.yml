@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/baegaggyeong/MyC/Celsius_and_Fahrenheit'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _line, symObjAddr: 0x0, symBinAddr: 0x100003BFC, symSize: 0x1C }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _line, symObjAddr: 0x0, symBinAddr: 0x100003BFC, symSize: 0x1C }
+  - { offsetInCU: 0x56, offset: 0x56, size: 0x8, addend: 0x0, symName: _select_menu, symObjAddr: 0x1C, symBinAddr: 0x100003C18, symSize: 0x6C }
+  - { offsetInCU: 0x7E, offset: 0x7E, size: 0x8, addend: 0x0, symName: _CtoF, symObjAddr: 0x88, symBinAddr: 0x100003C84, symSize: 0x64 }
+  - { offsetInCU: 0xA6, offset: 0xA6, size: 0x8, addend: 0x0, symName: _FtoC, symObjAddr: 0xEC, symBinAddr: 0x100003CE8, symSize: 0x6C }
+  - { offsetInCU: 0xCE, offset: 0xCE, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x158, symBinAddr: 0x100003D54, symSize: 0xDC }
+...
