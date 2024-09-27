@@ -9,7 +9,7 @@ int produce_random_num(int arrange_S1[], int size_S1){
     
     srand(time(NULL));
 
-    for(int i = 1; i <= size_S1; i++){
+    for(int i =0; i < size_S1; i++){
 
         arrange_S1[i] = rand() % 100 + 1;
         
