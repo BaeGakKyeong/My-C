@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/baegaggyeong/MyC/sum_with_function'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _sum_2num, symObjAddr: 0x0, symBinAddr: 0x100003E54, symSize: 0x28 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _sum_2num, symObjAddr: 0x0, symBinAddr: 0x100003E54, symSize: 0x28 }
+  - { offsetInCU: 0x85, offset: 0x85, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x28, symBinAddr: 0x100003E7C, symSize: 0xA4 }
+...
