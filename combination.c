@@ -1,22 +1,17 @@
 //조합(combination) 계산기
 #include <stdio.h>
 
-int combination(int x, int y){
-    int R_fac = 1, NmR_fac = 1;     //r factorial, n - r factorial
-
-    for(int i = 1; i <= y; i++){
-        R_fac *= i;
+int factorial(int x){               //코드 수정: combination값을 바로 계산하지 않고, 더 작은 기능인 factorial값을 계산하는 함수를 사용(세분화)
+    int Fac = 1;
+    for(int i = 1; i <= x; i++){
+        Fac *= i;
     }
 
-    for(int j = 1; j <= x - y; j++){
-        NmR_fac *= j;
-    }
-
-    return R_fac / NmR_fac * R_fac;
+    return Fac;
 }
 
 int main(){
-    int n, r;
+    int n, r, nFac, rFac, nMrFac;   //n, r, n_Factorial, r_Factorial, n_minus_r_factoral
     
     printf("조합(combination) 계산기\n큰 자연수와 작은 자연수를 차례로 입력하시오: ");
     INPUT:
@@ -27,7 +22,11 @@ int main(){
         goto INPUT;
     }
     else{
-        printf("C(n, r)값은 %d입니다.", combination(n, r));
+        nFac = factorial(n);
+        rFac = factorial(r);
+        nMrFac = factorial(n-r);
+
+        printf("C(n, r)값은 %d입니다.", nFac / (rFac * nMrFac));
     }
 
     return 0;    
