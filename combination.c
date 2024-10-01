@@ -2,12 +2,20 @@
 #include <stdio.h>
 
 int factorial(int x){               //코드 수정: combination값을 바로 계산하지 않고, 더 작은 기능인 factorial값을 계산하는 함수를 사용(세분화)
-    int Fac = 1;
+    int fac = 1;
     for(int i = 1; i <= x; i++){
-        Fac *= i;
+        fac *= i;
     }
 
-    return Fac;
+    return fac;
+}
+
+int combination(int x, int y){      //코드 수정2: main함수에서 factorial함수만을 이용해서 combination을 구하지 않고, 기능을 더 세분화 함
+    int Nfac = factorial(x);        //이때, main함수 외의 함수에서, 다른 함수를 호출하는 것이 가능함.(아이패드 공부 노트 참조)
+    int Rfac = factorial(y);
+    int NmRfac = factorial(x - y);
+
+    return Nfac / (Rfac * NmRfac);
 }
 
 int main(){
@@ -22,11 +30,7 @@ int main(){
         goto INPUT;
     }
     else{
-        nFac = factorial(n);
-        rFac = factorial(r);
-        nMrFac = factorial(n-r);
-
-        printf("C(n, r)값은 %d입니다.", nFac / (rFac * nMrFac));
+        int i = 1;
     }
 
     return 0;    
