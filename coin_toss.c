@@ -5,7 +5,7 @@
 int random_num(){
     srand((unsigned)time(NULL));
 
-    return rand() % 1;
+    return rand() % 2;  //1로 나눈 나머지는 항상 0이기 때문에, 0 또는 1을 반환하려면 2로 나눠야 한다.
 }
 
 int main(){
