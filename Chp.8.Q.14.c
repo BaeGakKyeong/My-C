@@ -1,3 +1,4 @@
+//어떤 자연수를 두 소수의 합으로 표현하는 모든 수식을 제시
 #include <stdio.h>
 
 int prime_num(int num){
