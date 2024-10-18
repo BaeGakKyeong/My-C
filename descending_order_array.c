@@ -14,8 +14,8 @@ void descending_order(int array1[], int size){
                 largest = array1[i];    //배열 중 가장 큰 값을 0으로 초기화 시켜야 다음 큰 값을 찾음...
                 index = i;
             }
+            array1[index] = 0;
         }
-        array1[index] = 0;
         array2[num] = largest;
         num++;  
 
