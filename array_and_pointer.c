@@ -6,6 +6,7 @@ int main(){
     for(int i = 0; i < 3; i++){
         printf("&array[%d] = %p\n", i, &array[i]);
     }
+    printf("%p", array);
 
     return 0;
 }
