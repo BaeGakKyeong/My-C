@@ -5,7 +5,7 @@ int main(){
     //char array[]; 이 문장은 컴파일 오류를 발생시킨다.
     char *p = NULL;
 
-    scanf("%s", p);
+    scanf("%s", p); // --> scanf()로 문자열을 받을 때, p가 const로 지정되어 있어서
 
     printf("%s", p);
 
