@@ -9,6 +9,8 @@ void seat_chart(int seat[][COL]);
 int input_row();
 char input_col();
 void change_seat(int seat[][COL], int row, char col);
+int IDandPW();
+int identify_ID(char ID[]);
 
 int main(){
     int seat[ROW][COL] = {0}, row, col;
@@ -117,5 +119,33 @@ void change_seat(int seat[][COL], int row, char col){
     }
     else{
         seat[row][col] = 1;
+    }
+}
+
+int IDandPW(){
+    char ID[20] = "";
+    char PW[30] = "";
+
+    printf("ID: ");
+    scanf("%s", ID);
+
+    
+}
+
+int identify_ID(char ID[]){
+    if(*ID == "test1\0"){
+        return 1;
+    }
+    else if(*ID == "test2\0"){
+        return 2;
+    }
+    else if(*ID == "test3\0"){
+        return 3;
+    }
+    else if(*ID == "test4\0"){
+        return 4;
+    }
+    else{
+        return 0;
     }
 }
