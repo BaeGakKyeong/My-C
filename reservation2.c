@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define ROW 10
 #define COL 10
 
@@ -16,45 +17,49 @@ int main(){
     int seat[ROW][COL] = {0}, row, col;
 
     while(1){
-        switch(menu()){
-            case 1:                 //예약
-                seat_chart(seat);
-
-                row = input_row() - 1;
-                col = input_col() - 65;
-
-                if(seat[row][col] != 0){
-                    printf("이미 예약된 좌석입니다.\n");
-                    break;
-                }
-                else{
-                    change_seat(seat, row, col);
-                    printf("예약되었습니다.\n");
+        line();
+        if(IDandPW()){
+            line();
+            switch(menu()){
+                case 1:                 //예약
                     seat_chart(seat);
-                    break;
-                }
 
-            case 2:                 //예약취소
-                seat_chart(seat);
+                    row = input_row() - 1;
+                    col = input_col() - 65;
 
-                row = input_row() - 1;
-                col = input_col() - 65;
+                    if(seat[row][col] != 0){
+                        printf("이미 예약된 좌석입니다.\n");
+                        break;
+                    }
+                    else{
+                        change_seat(seat, row, col);
+                        printf("예약되었습니다.\n");
+                        seat_chart(seat);
+                        break;
+                    }
 
-                if(seat[row][col] != 1){
-                    printf("예약되지 않은 좌석입니다.\n");
-                    break;
-                }
-                else{
-                    change_seat(seat, row, col);
-                    printf("예약이 취소되었습니다.\n");
+                case 2:                 //예약취소
                     seat_chart(seat);
-                    break;
-                }
 
-            case 3: 
-                exit(EXIT_SUCCESS);
-            default:
-                exit(EXIT_FAILURE);
+                    row = input_row() - 1;
+                    col = input_col() - 65;
+
+                    if(seat[row][col] != 1){
+                        printf("예약되지 않은 좌석입니다.\n");
+                        break;
+                    }
+                    else{
+                        change_seat(seat, row, col);
+                        printf("예약이 취소되었습니다.\n");
+                        seat_chart(seat);
+                        break;
+                    }
+
+                case 3: 
+                    exit(EXIT_SUCCESS);
+                default:
+                    exit(EXIT_FAILURE);
+            }
         }
     }
 }
@@ -128,21 +133,74 @@ int IDandPW(){
 
     printf("ID: ");
     scanf("%s", ID);
+    
+    switch (identify_ID(ID)){
+    case 1:
+        printf("PW: ");
+        scanf("%s", PW);
+        
+        if(strcmp(PW, "1111") == 0){
+            return 1;
+        }
+        else{
+            printf("비밀번호가 틀렸습니다.\n");
+            return 0;
+        }
 
+    case 2:
+        printf("PW: ");
+        scanf("%s", PW);
+
+        if(strcmp(PW, "2222") == 0){
+            return 2;
+        }
+        else{
+            printf("비밀번호가 틀렸습니다.\n");
+            return 0;
+        }
+
+    case 3:
+        printf("PW: ");
+        scanf("%s", PW);
+
+        if(strcmp(PW, "3333") == 0){
+            return 3;
+        }
+        else{
+            printf("비밀번호가 틀렸습니다.\n");
+            return 0;
+        }
+
+    case 4:
+        printf("PW: ");
+        scanf("%s", PW);
+
+        if(strcmp(PW, "4444") == 0){
+            return 4;
+        }
+        else{
+            printf("비밀번호가 틀렸습니다.\n");
+            return 0;
+        }
+    
+    default:
+        printf("존재하지 않는 아이디입니다.\n");
+        return 0;
+    }
     
 }
 
 int identify_ID(char ID[]){
-    if(*ID == "test1\0"){
+    if(strcmp(ID, "test1") == 0){
         return 1;
     }
-    else if(*ID == "test2\0"){
+    else if(strcmp(ID, "test2") == 0){
         return 2;
     }
-    else if(*ID == "test3\0"){
+    else if(strcmp(ID, "test3") == 0){
         return 3;
     }
-    else if(*ID == "test4\0"){
+    else if(strcmp(ID, "test4") == 0){
         return 4;
     }
     else{

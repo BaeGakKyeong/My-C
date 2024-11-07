@@ -2,12 +2,14 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/baegaggyeong/MyC/reservation2'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003958, symSize: 0x1A0 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003958, symSize: 0x1A0 }
-  - { offsetInCU: 0x85, offset: 0x85, size: 0x8, addend: 0x0, symName: _seat_chart, symObjAddr: 0x1A0, symBinAddr: 0x100003AF8, symSize: 0x15C }
-  - { offsetInCU: 0xFD, offset: 0xFD, size: 0x8, addend: 0x0, symName: _change_seat, symObjAddr: 0x2FC, symBinAddr: 0x100003C54, symSize: 0x8C }
-  - { offsetInCU: 0x13D, offset: 0x13D, size: 0x8, addend: 0x0, symName: _line, symObjAddr: 0x388, symBinAddr: 0x100003CE0, symSize: 0x1C }
-  - { offsetInCU: 0x152, offset: 0x152, size: 0x8, addend: 0x0, symName: _menu, symObjAddr: 0x3A4, symBinAddr: 0x100003CFC, symSize: 0x50 }
-  - { offsetInCU: 0x17A, offset: 0x17A, size: 0x8, addend: 0x0, symName: _input_row, symObjAddr: 0x3F4, symBinAddr: 0x100003D4C, symSize: 0x40 }
-  - { offsetInCU: 0x1A2, offset: 0x1A2, size: 0x8, addend: 0x0, symName: _input_col, symObjAddr: 0x434, symBinAddr: 0x100003D8C, symSize: 0x40 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003514, symSize: 0x1C0 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003514, symSize: 0x1C0 }
+  - { offsetInCU: 0x91, offset: 0x91, size: 0x8, addend: 0x0, symName: _seat_chart, symObjAddr: 0x1C0, symBinAddr: 0x1000036D4, symSize: 0x15C }
+  - { offsetInCU: 0x109, offset: 0x109, size: 0x8, addend: 0x0, symName: _change_seat, symObjAddr: 0x31C, symBinAddr: 0x100003830, symSize: 0x8C }
+  - { offsetInCU: 0x149, offset: 0x149, size: 0x8, addend: 0x0, symName: _line, symObjAddr: 0x3A8, symBinAddr: 0x1000038BC, symSize: 0x1C }
+  - { offsetInCU: 0x15E, offset: 0x15E, size: 0x8, addend: 0x0, symName: _menu, symObjAddr: 0x3C4, symBinAddr: 0x1000038D8, symSize: 0x50 }
+  - { offsetInCU: 0x186, offset: 0x186, size: 0x8, addend: 0x0, symName: _input_row, symObjAddr: 0x414, symBinAddr: 0x100003928, symSize: 0x40 }
+  - { offsetInCU: 0x1AE, offset: 0x1AE, size: 0x8, addend: 0x0, symName: _input_col, symObjAddr: 0x454, symBinAddr: 0x100003968, symSize: 0x40 }
+  - { offsetInCU: 0x1D6, offset: 0x1D6, size: 0x8, addend: 0x0, symName: _IDandPW, symObjAddr: 0x494, symBinAddr: 0x1000039A8, symSize: 0x290 }
+  - { offsetInCU: 0x20C, offset: 0x20C, size: 0x8, addend: 0x0, symName: _identify_ID, symObjAddr: 0x734, symBinAddr: 0x100003C48, symSize: 0xD8 }
 ...
