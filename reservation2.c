@@ -21,7 +21,7 @@ int main(){
         if(IDandPW()){
             line();
             switch(menu()){
-                case 1:                 //예약
+                case 1:
                     seat_chart(seat);
 
                     row = input_row() - 1;
